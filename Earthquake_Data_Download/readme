@@ -1,0 +1,28 @@
+Code Entry point is: run_me.sh
+One can run the above file from terminal to parrallalize the download process with slurm jobs for each individual station. 
+The run_me.sh <- read station_metadata.csv file.
+The downloaded data will be kept in datadir folder.
+
+----------------------
+Folder Strcuture
+----------------------
+readme - instructions
+
+run_me.sh - code entry point. Requires station metadata. Sample metatdata is provided in "sample_station_metadata.csv".
+
+dwnld_sngl_stn_slurm.sh - invoked by run_me.sh. submits batch jobs of data downloads for each station prallely.
+
+job_status - stores the status of batch jobs
+
+datadir
+	data - stores the sac files
+	err - csv files with errors of events for each stations
+	inv - stores station inventory files
+	logging - all the events for which data was downloaded for a station
+
+
+	
+----------------------
+Important Note
+----------------------
+Please run only for one station to confirm the download works as needed before proceeding with bacth submission.
